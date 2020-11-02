@@ -23,12 +23,7 @@ void loop(){
     
     while (Serial.available() == 0 && Serial.read() != '\n') {
     }
-   // int total_devices = Serial.read(); // gets number of devices sent from End Xbee
-      // Serial.print("Total Devices: "); // probably don't need to transmit this serially to rasp pi xbee
-      // Might need to modify next two lines to determine how you want to send devices and AQ
-//    Serial.print("Dev: ");
-   // Serial.println(total_devices);
-//    Serial.print("AQ: ");
+
     Serial.print(airQuality, DEC); // print numerical value from sensor
     Serial.println(" PPM"); // print numerical value from sensor           
     Serial.print(Serial.read());
